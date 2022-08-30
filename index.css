@@ -54,6 +54,15 @@ nav > .nav-items {
   cursor: pointer;
 }
 
+nav > .nav-items > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+nav > .nav-items > li > a:hover {
+  text-decoration: underline;
+}
+
 nav > .nav-items > li:last-child {
   font-size: 1.5rem;
 }
@@ -135,7 +144,7 @@ footer > ul > li > i {
   padding: 4rem 1.7rem;
 }
 
-#contact-form > h2 {
+#contact-form > p {
   font-family: "Inter", sans-serif;
   font-size: 2.3rem;
   line-height: 3.14rem;
@@ -647,7 +656,7 @@ footer {
     align-items: center;
   }
 
-  #contact-form > h2 {
+  #contact-form > p {
     width: 75%;
     text-align: left;
   }
