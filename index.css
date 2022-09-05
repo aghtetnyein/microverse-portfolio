@@ -11,6 +11,16 @@ body {
   font-size: 14px;
 }
 
+section {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+}
+
 nav {
   background-color: #3c3a39;
   color: #fff;
@@ -142,6 +152,7 @@ footer > ul > li > i {
 #works {
   background-color: white;
   padding: 4rem 1.7rem;
+  transition: all 1s;
 }
 
 #contact-form > p {
@@ -521,6 +532,49 @@ footer > ul {
 
 #contact-form > form > ul li + li {
   margin-top: 2rem;
+}
+
+#navigation-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3c3a39;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 2;
+  color: white;
+  transition: all 0.5s;
+}
+
+#navigation-modal > .close {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 1.7rem;
+}
+
+#navigation-modal > .nav-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 3rem 1.7rem;
+}
+
+#navigation-modal > .nav-items > li {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(154, 154, 154);
+}
+
+#navigation-modal > .nav-items > li > a {
+  color: #fff5e1;
+  text-decoration: none;
 }
 
 #about-me > .language-skills-grid > .item > ul > li {

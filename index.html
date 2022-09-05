@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
     <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
     <title>SA AUNG HTET NYEIN</title>
   </head>
   <body>
@@ -18,15 +19,27 @@
         <a href="#" class="logo"><p>SASA</p></a>
         <ul class="nav-items">
           <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact-form">Contact</a></li>
           <li>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
           </li>
         </ul>
-        <div class="menu"><i class="fa-solid fa-bars"></i></div>
+        <div id="menu" class="menu"><i class="fa-solid fa-bars"></i></div>
       </nav>
     </header>
+
+    <!-- navigation modal -->
+    <div id="navigation-modal">
+      <div id="close" class="close"><i class="fa-solid fa-xmark"></i></div>
+      <ul class="nav-items">
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact-form">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- headline -->
     <section id="headline">
