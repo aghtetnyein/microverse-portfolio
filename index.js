@@ -33,7 +33,7 @@ const navModal = document.getElementById("navigation-modal");
 const menu = document.getElementById("menu");
 const close = document.getElementById("close");
 const navLinks = document.querySelectorAll("#navigation-modal a");
-const worksPopupClose = document.querySelector("#works-popup #close");
+const worksPopupClose = document.querySelector("#works-popup .close");
 const worksPopup = document.querySelector("#works-popup");
 
 const worksGrid = document.querySelector("#works .works-grid");
