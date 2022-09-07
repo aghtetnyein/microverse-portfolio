@@ -586,7 +586,7 @@ footer > ul {
 }
 
 #contact-form > form > ul > li {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -760,6 +760,17 @@ footer > ul {
 #contact-form > form > ul > li > input:focus,
 #contact-form > form > ul > li > textarea:focus {
   border: 1px solid #aaa;
+}
+
+.input-error {
+  border: 1px solid #f00 !important;
+}
+
+.error-msg {
+  font-family: 'Inter', sans-serif;
+  color: #f00;
+  font-size: 0.8rem;
+  margin-top: 2rem;
 }
 
 footer {
