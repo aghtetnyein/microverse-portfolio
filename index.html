@@ -210,7 +210,7 @@
         chat please get in touch.
       </p>
 
-      <form action="https://formspree.io/f/meqdoeyo" method="post">
+      <form id="contact-from-validation" action="https://formspree.io/f/meqdoeyo" method="post">
         <ul>
           <li>
             <label for="full_name">Full name</label>
@@ -220,8 +220,8 @@
               name="full_name"
               placeholder="Full name"
               maxlength="30"
-              required
             />
+            <small class="error-msg"></small>
           </li>
           <li>
             <label for="email">Email address</label>
@@ -230,8 +230,8 @@
               id="email"
               name="email"
               placeholder="Email address"
-              required
             />
+            <small class="error-msg"></small>
           </li>
           <li>
             <label for="message">Message:</label>
@@ -241,7 +241,6 @@
               placeholder="Enter text here"
               rows="5"
               maxlength="500"
-              required
             ></textarea>
           </li>
           <li>
