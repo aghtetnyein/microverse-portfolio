@@ -189,3 +189,18 @@ form.addEventListener('submit', (event) => {
     form.elements.email.value = '';
   }
 });
+
+form.elements.full_name.addEventListener('change', () => {
+  formData.name = form.elements.full_name.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
+
+form.elements.email.addEventListener('change', () => {
+  formData.email = form.elements.email.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
+
+form.elements.message.addEventListener('change', () => {
+  formData.message = form.elements.message.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
