@@ -132,6 +132,7 @@ worksPopupClose.addEventListener('click', () => {
   enableScroll();
 });
 
+// form validation
 function showMessage(input, message, type) {
   const msg = input.parentNode.querySelector('small');
   msg.innerText = message;
@@ -187,5 +188,38 @@ form.addEventListener('submit', (event) => {
     form.submit();
     form.elements.full_name.value = '';
     form.elements.email.value = '';
+    form.elements.message.value = '';
+    localStorage.removeItem('formData');
   }
+});
+
+// preserve data with localStorage
+const formDataFromLocalStorage = localStorage.getItem('formData') ? JSON.parse(localStorage.getItem('formData')) : null;
+const formData = {
+  name: formDataFromLocalStorage ? formDataFromLocalStorage.name : '',
+  email: formDataFromLocalStorage ? formDataFromLocalStorage.email : '',
+  message: formDataFromLocalStorage ? formDataFromLocalStorage.message : '',
+};
+
+const setFormData = () => {
+  form.elements.full_name.value = formData.name;
+  form.elements.email.value = formData.email;
+  form.elements.message.value = formData.message;
+};
+
+setFormData();
+
+form.elements.full_name.addEventListener('change', () => {
+  formData.name = form.elements.full_name.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
+
+form.elements.email.addEventListener('change', () => {
+  formData.email = form.elements.email.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
+
+form.elements.message.addEventListener('change', () => {
+  formData.message = form.elements.message.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
 });
