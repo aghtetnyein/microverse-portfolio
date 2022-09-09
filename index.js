@@ -44,7 +44,7 @@ function disableScroll() {
   const xPos = window.scrollX;
   const yPos = window.scrollY;
   window.onscroll = () => {
-    window.scroll(xPos, yPos);
+    window.scroll(yPos, xPos);
   };
 }
 
@@ -161,7 +161,7 @@ function validateEmail(input, requiredMsg, invalidMsg) {
     return false;
   }
   // validate email format
-  const emailRegex = /^[a-z][a-z0-9_@.]*$/;
+  const emailRegex = /^[a-z][a-z0-9_.]*$/;
 
   const email = input.value.trim();
   if (!emailRegex.test(email)) {
@@ -216,7 +216,6 @@ form.elements.full_name.addEventListener('change', () => {
 
 form.elements.email.addEventListener('change', () => {
   formData.email = form.elements.email.value;
-  localStorage.setItem('formData', JSON.stringify(formData));
 });
 
 form.elements.message.addEventListener('change', () => {
